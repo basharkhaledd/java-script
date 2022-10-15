@@ -1,0 +1,48 @@
+<html>
+    
+    <head>
+</head>
+   
+    <body>
+      <ul class="list">
+        <li price="30">Keybord</li>
+        <li price="30">mouse</li>
+        <li price="30">laptop</li>
+        <li price="30">head</li>
+
+      </ul>
+     
+     <button id="b" style="display:none;">ok</button>
+      <div id="d"></div>
+
+        <script>
+         var allitem=document.querySelectorAll(".list li");
+         var div = document.querySelector("#d");
+         var but = document.querySelector("#b");
+         var total=0;
+         
+         allitem.forEach(function(x){
+          x.onclick=function(){
+           total+= parseInt(x.getAttribute("price"));
+           div.innerHTML+=x.textContent+"<br>";
+           
+           if (div.innerHTML !="") {
+            but.style.display="block";
+           }
+          };
+          
+          });
+         but.onclick=function(){
+          alert(total+"$");
+         };
+     
+        </script>
+    
+        
+        
+
+    </body>
+    
+    
+    
+</html>

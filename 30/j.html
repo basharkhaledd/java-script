@@ -1,0 +1,81 @@
+<html>
+    
+    <head>
+</head>
+   
+    <body>
+<input type="text" id="i1">
+<input type="button" id="i2" value="button">
+<input type="checkbox" id="i3">
+<h1 id="h"></h1>
+
+<button onclick="myget();">my Get</button>
+<br><br>
+<button onclick="myset();">my Set</button>
+<br><br>
+<button onclick="myadd();">add element</button>
+<br><br>
+<button onclick="myremove();">remove element</button>
+        <script>
+         
+         // getattribute ________________________________________________________________________________
+           
+            function myget() {
+              //  var b = window.i1.getAttribute("type");
+             //   var b = window.i2.getAttribute("type");
+                  var b = window.i3.getAttribute("type");        // قولي شو نوع الانبوت
+                
+                window.h.innerHTML=b;
+            }
+            
+            
+            
+          // setattribute ________________________________________________________________________________
+          
+          function myset(){
+            
+            var c = window.i1.setAttribute("type","file") ;
+                    // غيرلي الانبوت من نوع تيكست الى فايل 
+          }
+
+          
+          
+          
+          //createlement _______________________________________________________________________
+          
+          function myadd() {
+            
+          var v =document.createElement("INPUT");         //بس يضغط على بوتون ادد يضيف انبوت  
+          
+            v.setAttribute("type","button");            
+            v.setAttribute("value","login");            
+            v.setAttribute("style","border: solid 1px red; margin:10px");            
+
+             document.body.appendChild(v);
+          }
+          
+          
+          //removeelement _________________________________________________________________
+          
+          function myremove() {
+           /* var x= document.getElementById("i1");
+            if(x!=null)    // اذا لقيتو موجود احذفو عشان لو حذفتو وكبست كمان مرة على ريموف حيعطيك ايرور 
+            x.remove();
+            */
+           if(window.i1 !=null)  // كود اختصار 
+            window.i1.remove();
+            window.i2.remove();
+          }
+          
+          
+          
+        </script>
+    
+        
+        
+
+    </body>
+    
+    
+    
+</html>

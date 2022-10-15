@@ -1,0 +1,79 @@
+<html>
+    
+    <head>
+</head>
+   
+    <body>
+<input id="txtname">
+<button onclick="go1();">say hello</button>
+   <hr>
+   <input id="txtname1">
+    <input id="txtname2">
+<button onclick="go2();">run code</button>
+<h1 id="h1" style="color:green"></h1>
+<h1 id="h2" style="color:red"></h1>
+
+
+        <script>
+            
+           function go1() { 
+         try {
+            
+            var name = document.getElementById("txtname").value;     // لو مثلا كتبنا الايدي غلط هيطلع ايرور مش بالكونسول بالصفحة
+           alert("hello "+name);
+            }
+                      
+         catch(err) {
+            window.h2.ineerHTML=err;
+                    }
+         finally{
+            window.h1.innerHTML="finally";          // ينفذها لو في خطا او ما في وهو جزء اختياري
+                }
+         
+                         }       
+//___________________________________________________________________________________________________________________
+ 
+                   // نعمل احنا خطا اذا الرقم المقسوم عليه صفر يطلع هو صفر!! ى
+                    // طبعا يطلع في الكونسول اذا بدك ياه يطلع باتش 1 حطو في تراي وكاتش قو2
+                   function chek() {                
+                    var c = window.txtname2.value;
+                    if (Number(c)==0) {
+                        throw "number 2 is zero !!!";
+                    }
+                   }
+
+
+
+//___________________________________________________________________________________________________________________
+                         function go2() {
+                            
+                               
+                                 chek();
+                                var num1= document.getElementById("txtname1").value;
+                            var num2= document.getElementById("txtname2").value;
+                            var result= num1/num2;
+                            window.h1.innerHTML=result;
+                                
+                                       }
+                    
+   //_______________________________________________________________________________________
+   
+   // تتبع الكود
+   //debugger تكتب قبل الكود الي بدك تتبعه 
+   
+   debugger;
+   for (x=1 ; x<=10 ; x++) {
+    
+    document.write(x+"<br>");
+   }
+
+        </script>
+    
+        
+        
+
+    </body>
+    
+    
+    
+</html>

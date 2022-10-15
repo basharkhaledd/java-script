@@ -1,0 +1,60 @@
+<html>
+    
+    <head>
+</head>
+   
+    <body>
+
+
+        <script>
+            /*
+            document.write(Math.random() + "<br>");
+            document.write(Math.PI + "<br>");
+
+            document.write(Number.isInteger("1111") + "<br>");
+           document.write(Number.isInteger(1111) + "<br>");
+           */
+            
+            
+            // لو شلنا Math , Number الكود ما بشتغل فالحل مع with()
+           
+           with(Number){
+             document.write(isInteger("1111") + "<br>");
+           document.write(isInteger(1111) + "<br>");
+            
+           }
+            
+            with(Math){
+             
+            document.write(random() + "<br>");
+            document.write(PI + "<br>");
+    
+            }
+            //________________________________________________________________________________________________________
+            
+            
+          /*  num = 55;
+            alert(num);
+            
+            حيشتغل الكود عادي
+            لكن لو بدك يحاسبك على كل كلمة
+         */   
+            
+            "use strict";
+            num = 55;
+            alert(num);
+            
+            //__________________________________________________________________________________________
+            
+            
+            
+        </script>
+    
+        
+        
+
+    </body>
+    
+    
+    
+</html>

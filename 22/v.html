@@ -1,0 +1,58 @@
+<html>
+    
+    <head><link rel="stylesheet" type="text/css" href="n.css">
+</head>
+    
+    <body>
+       <div id="b"></div>
+       <hr>
+      <div id="e"></div>
+      <br><br>
+      <button onclick="stoptime();">stop time</button>
+      <hr>
+          <button onclick="stop();">stop</button>           
+        <button onclick="run();">start</button>           
+          
+    <script >
+        
+        //setTimeout and clearTimeout
+        var c;
+        
+        function run( ) 
+        {
+        window.b.innerHTML+="<button>ok</button>";
+        c= setTimeout(run,1000);  
+        }
+                              
+        
+       //var c= setTimeout(run,2000);     //   بعد ثانيتين كل 1000عبارة عن ثانية واحدة functioنفذ ال
+        
+        setTimeout(function()  {window.b.innerHTML+="hello";}   ,   2000);   //ممكن تكتبها هيك وحط الكود الي بدك ياه داخل فانكشن
+        
+        function stop()  { 
+            clearTimeout(c);
+        }
+        //------------------------------------------------------------------------------------------------------------- -->
+        
+        //setInterval and clearInterval    الفرق بينها وبين الي فوق انو هاي بتزود لحالها بتدون ما تحطها بفنكشن زي ما عملنا فوق
+         
+       
+      function runi( ) 
+        {
+       window.e.innerHTML=new Date().toLocaleTimeString();
+        }
+       var v=  setInterval(runi,1000);
+         
+         function stoptime() {
+             clearInterval(v);
+         }
+       
+         
+    </script>
+      
+    
+    </body>
+    
+    
+    
+</html>
